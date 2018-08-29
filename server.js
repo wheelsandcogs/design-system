@@ -58,7 +58,7 @@ if (env === 'production' && useAuth === 'true') {
 }
 
 // Set up App
-var appViews = [path.join(__dirname, '/app/views/'), path.join(__dirname, '/lib/')]
+var appViews = [require('@ukhomeoffice/frontend-toolkit').views, path.join(__dirname, '/app/views/'), path.join(__dirname, '/lib/')]
 
 var nunjucksAppEnv = nunjucks.configure(appViews, {
   autoescape: true,
